@@ -1,2 +1,7 @@
 # My dotfiles
 
+install
+- install chef
+- echo "cookbook_path [ '$PWD/chef-repo/cookbooks' ]" > chef-repo/.chef/knife.rb
+- echo "file_cache_path \"$PWD/chef-solo\"" > solo.rb
+- echo "cookbook_path \"$PWD/chef-repo/cookbooks\"" > solo.rb

@@ -18,4 +18,4 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 source $ZSH/oh-my-zsh.sh
 
-source .zshrc-personal
+source ~/.zshrc-personal

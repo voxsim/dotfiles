@@ -24,4 +24,4 @@ PS: If meta key doesn't work on OSX, set it to ESC+
 - updates plugin(s)
 
 `prefix + meta + u`
-- updates plugin(s)
+- remove/uninstall plugins not on the plugin list

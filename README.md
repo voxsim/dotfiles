@@ -12,9 +12,9 @@
 `prefix + R`
 - Reload tmux.conf
 
-PS: If meta doesn't work on OSX, set it to ESC+
+PS: If meta key doesn't work on OSX, set it to ESC+
 
-#### tmux-plugins
+#### tmux-plugin-manager (https://github.com/tmux-plugins/tpm)
 
 `prefix + I`
 - Installs new plugins from GitHub or any other git repository

@@ -2,11 +2,19 @@
 
 ./install.sh
 
-### Key bindings
+## Key bindings
 
-#### Tmux
+### Tmux
 
 `prefix` is Ctrl-A
+`meta` is alt
+
+`prefix + R`
+- Reload tmux.conf
+
+PS: If meta doesn't work on OSX, set it to ESC+
+
+#### tmux-plugins
 
 `prefix + I`
 - Installs new plugins from GitHub or any other git repository
@@ -15,5 +23,5 @@
 `prefix + U`
 - updates plugin(s)
 
-`prefix + alt + u`
-- remove/uninstall plugins not on the plugin list
+`prefix + meta + u`
+- updates plugin(s)

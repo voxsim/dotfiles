@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.zshrc: zshrc
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.tmuxinator: tmuxinator
+
+- shell:
+  - [touch ~/.zshrc-personal, create personal zsh file]
+  - [git submodule update --init --recursive, Installing submodules]
+  - [gem install tmuxinator, Install tmuxinator]

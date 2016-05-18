@@ -11,10 +11,12 @@ ZSH_THEME="soliah"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux)
+plugins=(git tmux tmuxinator)
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export EDITOR='vim'
+export DISABLE_AUTO_TITLE=true
 
 source $ZSH/oh-my-zsh.sh
 

@@ -1,6 +1,6 @@
 # My dotfiles
 
-./install.sh
+./install
 
 ## Key bindings
 

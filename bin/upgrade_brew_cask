@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# get the list of installed casks
+casks=( $(brew cask list) )
+
+for cask in ${casks[@]}; do
+  current="$(brew cask info $cask | sed -n '1p' | sed -n 's/^.*: \(.*\)$/\1/p')"
+  installed=( $(ls /opt/homebrew-cask/Caskroom/$cask))
+  if (! [[ " ${installed[@]} " == *" $current "* ]]); then
+    echo "Upgrading $cask to v$current."
+    (set -x; brew cask install $cask --force;)
+  else
+    echo "$cask v$current is up-to-date, skipping."
+  fi
+done

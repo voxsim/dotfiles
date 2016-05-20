@@ -10,8 +10,11 @@
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.tmuxinator: tmuxinator
+    ~/.bin: bin
 
 - shell:
   - [touch ~/.zshrc-personal, create personal zsh file]
   - [git submodule update --init --recursive, Installing submodules]
   - [gem install tmuxinator, Install tmuxinator]
+  - [chmod 755 ~/.bin/*, Make executable everything in .bin]
+  - [source ~/.zshrc, Reload zshrc configuration]

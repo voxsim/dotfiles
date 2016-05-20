@@ -14,7 +14,7 @@ ZSH_THEME="soliah"
 plugins=(git tmux tmuxinator)
 
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin"
 export EDITOR='vim'
 export DISABLE_AUTO_TITLE=true
 

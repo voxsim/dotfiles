@@ -1,9 +1,6 @@
 # My dotfiles
 
-```
-
-./install
-```
+`./install`
 
 ## Key bindings
 

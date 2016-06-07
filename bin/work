@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+directory=`pwd`
+name=~directory
+
+tmuxinator start project root=$directory name=$name

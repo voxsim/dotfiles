@@ -1,2 +1,3 @@
 chef-repo/.chef/knife.rb
 tmuxinator/*.yml
+bin/tim

@@ -12,7 +12,9 @@
     ~/.tmux.conf: tmux.conf
     ~/.tmuxinator: tmuxinator
     ~/.bin: bin
-
+    ~/.bin/tim: Tim/tim
+    ~/.tim: Tim/audio_files
+    ~/.timrc: timrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -7,14 +7,18 @@
 - link:
     ~/.dotfiles: ''
     ~/.zshrc: zshrc
-    ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
+    ~/.tmux/plugins/tpm: tpm
+    ~/.tmux.conf: tmux.conf
     ~/.tmuxinator: tmuxinator
     ~/.bin: bin
 
+
 - shell:
-  - [touch ~/.zshrc-personal, create personal zsh file]
   - [git submodule update --init --recursive, Installing submodules]
+  - [touch ~/.zshrc-personal, Create personal zsh file]
+  - [vim +PlugClean +PluginInstall +qall, Install vundle plugins]
+  - [tpm/bin/install_plugins, Install tmux plugins]
   - [gem install tmuxinator, Install tmuxinator]
   - [chmod 755 ~/.bin/*, Make executable everything in .bin]
   - [source ~/.zshrc, Reload zshrc configuration]

@@ -1,9 +1,0 @@
-# ~/.tmuxinator/kata.yml
-
-name: kata
-root: ~/<%= @settings["workspace"] %>
-
-windows:
-  - editor: vim
-  - git: git status
-  - logs:

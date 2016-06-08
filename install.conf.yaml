@@ -19,7 +19,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [touch ~/.zshrc-personal, Create personal zsh file]
-  - [vim +PlugClean +PluginInstall +qall, Install vundle plugins]
+  - [vim +PlugClean +PluginInstall! +qall, Install vundle plugins]
   - [dependencies/tpm/bin/install_plugins, Install tmux plugins]
   - [chmod 755 ~/.bin/*, Make executable everything in .bin]
   - [source ~/.zshrc, Reload zshrc configuration]

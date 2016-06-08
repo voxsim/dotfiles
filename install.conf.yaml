@@ -6,21 +6,20 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.bin: bin
     ~/.zshrc: zshrc
     ~/.vimrc: vimrc
-    ~/.tmux/plugins/tpm: tpm
+    ~/.tmux/plugins/tpm: dependencies/tpm
     ~/.tmux.conf: tmux.conf
     ~/.tmuxinator: tmuxinator
-    ~/.bin: bin
-    ~/.bin/tim: Tim/tim
-    ~/.tim: Tim/audio_files
+    ~/.bin/tim: dependencies/tim/tim
+    ~/.tim: dependencies/tim/audio_files
     ~/.timrc: timrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [touch ~/.zshrc-personal, Create personal zsh file]
   - [vim +PlugClean +PluginInstall +qall, Install vundle plugins]
-  - [tpm/bin/install_plugins, Install tmux plugins]
-  - [gem install tmuxinator, Install tmuxinator]
+  - [dependencies/tpm/bin/install_plugins, Install tmux plugins]
   - [chmod 755 ~/.bin/*, Make executable everything in .bin]
   - [source ~/.zshrc, Reload zshrc configuration]

@@ -1,1 +1,13 @@
 
+[submodule "dependencies/dotbot"]
+	path = dependencies/dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "dependencies/tim"]
+	path = dependencies/tim
+	url = https://github.com/ggustafsson/Tim
+[submodule "dependencies/tpm"]
+	path = dependencies/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "dependencies/tmuxinator"]
+	path = dependencies/tmuxinator
+	url = https://github.com/tmuxinator/tmuxinator

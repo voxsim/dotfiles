@@ -3,5 +3,6 @@ root: <%= @settings["root"] %>
 
 windows:
   - editor: vim
-  - bash:
+  - work:
   - git: git status
+  - clock: tim -p

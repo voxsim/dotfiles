@@ -12,13 +12,8 @@ Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
-" Plug 'tpope/vim-surround'
-" Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
-" Plug 'AndrewRadev/splitjoin.vim'
-" Plug 'kana/vim-textobj-user'
-" Plug 'Julian/vim-textobj-variable-segment'
-" Plug 'sjl/gundo.vim'
 
 " Local plugins
 if filereadable(expand('~/.vimrc.plugins.local'))
@@ -191,6 +186,17 @@ map <leader>a :Ack!<space>
 
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_extensions = ['tag']
+
+" Excluding version control directories
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*        " Linux/MacOSX
+set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*,*\\node_modules\\*  " Windows ('noshellslash')
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 " Signify
 

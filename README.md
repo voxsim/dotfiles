@@ -1,6 +1,12 @@
 # My dotfiles
 
-`./install`
+## How to install it
+
+```
+git clone https://github.com/voxsim/dotfiles
+cd dotfiles
+./install
+```
 
 ## Key bindings
 

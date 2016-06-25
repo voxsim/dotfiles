@@ -4,6 +4,7 @@ set nocompatible
 
 call plug#begin('~/.vim/bundle')
 
+Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
 Plug 'mhinz/vim-signify'
 Plug 'ervandew/supertab'
@@ -191,7 +192,6 @@ let g:ctrlp_extensions = ['tag']
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*        " Linux/MacOSX
 set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*,*\\node_modules\\*  " Windows ('noshellslash')
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',

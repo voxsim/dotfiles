@@ -1,0 +1,6 @@
+--recurse=yes
+--exclude=.git
+--exclude=.svn
+--exclude=*.min.js
+--exclude=db/*
+--exclude=log/*

@@ -25,8 +25,11 @@
     ~/.bin/tim: dependencies/tim/tim
     ~/.tim: dependencies/tim/audio_files
     ~/.timrc: timrc
+    ~/.ctags: ctags
+    ~/.global_ignore: global_ignore
 
 - shell:
   - [touch ~/.zshrc-personal, Create personal zsh file]
   - [chmod 755 ~/.bin/*, Make executable everything in .bin]
   - [source ~/.zshrc, Reload zshrc configuration]
+  - [git config --global core.excludesfile $HOME/.global_ignore, add global ignore in git]

@@ -6,15 +6,16 @@ call plug#begin('~/.vim/bundle')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
-Plug 'mhinz/vim-signify'
-Plug 'ervandew/supertab'
+Plug 'craigemery/vim-autotag'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ervandew/supertab'
 Plug 'mileszs/ack.vim'
+Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/syntastic'
 
 " Local plugins
 if filereadable(expand('~/.vimrc.plugins.local'))
@@ -245,3 +246,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Easytags  =================================================================
+let g:easytags_cmd = '/usr/local/bin/ctags'

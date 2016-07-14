@@ -4,16 +4,15 @@ set nocompatible
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'bling/vim-airline' " many integration to look for
 Plug 'christoomey/vim-run-interactive'
 Plug 'craigemery/vim-autotag'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim' " commands to list
 Plug 'ervandew/supertab'
-Plug 'fatih/vim-go'
 Plug 'janko-m/vim-test'
-Plug 'kchmck/vim-coffee-script'
-Plug 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim' " -- until here
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -24,7 +23,7 @@ Plug 'tpope/vim-surround'
 
 " Local plugins
 if filereadable(expand('~/.vimrc.plugins.local'))
-    source ~/.vimrc.plugins.local
+  source ~/.vimrc.plugins.local
 endif
 
 call plug#end()
@@ -72,9 +71,9 @@ set smartcase
 " Persistent undo and backups ================================================
 
 if has('persistent_undo')
-    set undodir=~/.vim/tmp/undo
-    set undoreload=10000
-    set undofile
+  set undodir=~/.vim/tmp/undo
+  set undoreload=10000
+  set undofile
 endif
 
 set backupdir=~/.vim/tmp/backup
@@ -110,38 +109,37 @@ set sidescroll=1
 
 " Convenience mappings =======================================================
 
-" Make Y behave
-nnoremap Y y$
+" Disable arrow keys in normal mode
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
-" It's 2015.
-noremap j gj
-noremap k gk
+" Disable arrow keys in insert mode
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 
-" Easy paragraph formatting
-nnoremap Q gqip
+" Formatting
+noremap F gg=G
 
 " Easy tab navigation
-map <F1> gT
-map <F2> gt
+noremap <F1> gT
+noremap <F2> gt
 
-" Substitute
-nnoremap <leader>s :%s//<left>
+noremap <leader>a :Ack!<Space>
+noremap <leader>f :TestFile<CR>
+noremap <leader>g :TestVisit<CR>
+noremap <leader>l :TestLast<CR>
+noremap <leader>p :set paste!<CR> " Paste toggle
+noremap <leader>r :RunInInteractiveShell<space> " vim-run-interactive
+noremap <leader>s :%s//<left> " Substitute
+noremap <leader>t :TestNearest<CR>
+noremap <leader>T :TestSuite<CR>
 
-" Clear search highlighting
-map <C-l> :nohlsearch<CR>
-
-" Close QuickFix window
-map <silent> <leader>q :cclose<CR>
-
-" Paste toggle
-map <silent> <leader>p :set paste!<CR>
-
-" Wrapping
-map <silent> <leader>w :set wrap!<CR>
-
-" Recover from accidental Ctrl-U/Ctrl-W
-inoremap <C-U> <C-G>u<C-U>
-inoremap <C-W> <C-G>u<C-W>
+noremap <C-e> :NERDTreeToggle<CR>
+noremap <C-l> :nohlsearch<CR> " Clear search highlighting
 
 " Autocommands ===============================================================
 
@@ -150,15 +148,15 @@ if has('autocmd')
   set omnifunc=syntaxcomplete#Complete
 
   augroup vimrcEx
-  au!
+    au!
 
-  " Remove any trailing whitespace that is in the file
-  autocmd BufWrite * if ! &bin | :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) | endif
+    " Remove any trailing whitespace that is in the file
+    autocmd BufWrite * if ! &bin | :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) | endif
 
-  " Filetype-specific settings
-  autocmd Filetype ruby set tabstop=2 shiftwidth=2 softtabstop=2
-  autocmd BufRead *.html,*.htm set tabstop=2 shiftwidth=2 softtabstop=2 nowrap
-  autocmd BufRead *.txt set tabstop=2 shiftwidth=2 softtabstop=2
+    " Filetype-specific settings
+    autocmd Filetype ruby set tabstop=2 shiftwidth=2 softtabstop=2
+    autocmd BufRead *.html,*.htm set tabstop=2 shiftwidth=2 softtabstop=2 nowrap
+    autocmd BufRead *.txt set tabstop=2 shiftwidth=2 softtabstop=2
 
   augroup END
 
@@ -167,9 +165,6 @@ endif " has('autocmd')
 " Plugin settings ============================================================
 
 " NERD Tree
-
-map <C-e> :NERDTreeToggle<CR>
-
 let NERDTreeHighlightCursorline=1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -187,7 +182,6 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-map <leader>a :Ack!<space>
 
 " CtrlP
 
@@ -199,10 +193,10 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*        " Linux/MacOSX
 set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*,*\\node_modules\\*  " Windows ('noshellslash')
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+      \ 'file': '\v\.(exe|so|dll)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
 
 " Signify
 
@@ -223,24 +217,12 @@ let g:airline_symbols.branch = '⚡'
 " Local vimrc ================================================================
 
 if filereadable(expand('~/.vimrc.local'))
-    source ~/.vimrc.local
+  source ~/.vimrc.local
 endif
 
 " Project specific vim =======================================================
 set exrc
 set secure
-
-" Disable arrow keys =========================================================
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-" Disable arrow keys in insert mode ==========================================
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
 
 " Syntastic  =================================================================
 set statusline+=%#warningmsg#
@@ -255,9 +237,4 @@ let g:syntastic_check_on_wq = 0
 " Easytags  =================================================================
 let g:easytags_cmd = '/usr/local/bin/ctags'
 
-" vim-test ==================================================================
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+let g:autotagTagsFile=".tags"

@@ -6,13 +6,18 @@ call plug#begin('~/.vim/bundle')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
+Plug 'christoomey/vim-run-interactive'
 Plug 'craigemery/vim-autotag'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
+Plug 'fatih/vim-go'
+Plug 'janko-m/vim-test'
+Plug 'kchmck/vim-coffee-script'
 Plug 'mileszs/ack.vim'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
@@ -249,3 +254,10 @@ let g:syntastic_check_on_wq = 0
 
 " Easytags  =================================================================
 let g:easytags_cmd = '/usr/local/bin/ctags'
+
+" vim-test ==================================================================
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>

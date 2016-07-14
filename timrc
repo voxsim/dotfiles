@@ -12,12 +12,12 @@
 ###############################################################################
 
 # Should Tim wait for user input before starting work/break timer again?
-press_return=1
+press_return=0
 
 # The command that executes when the normal countdown mode ends.
 timer_cmd="afplay ~/.tim/alarm.wav"
 # Should the $timer_cmd command loop until termination of Tim?
-timer_repeat_cmd=0
+timer_repeat_cmd=1
 
 # The default time in minutes for the interval mode.
 interval=15
@@ -33,7 +33,7 @@ long_break_cmd="afplay ~/.tim/break.wav"
 # The command that executes when the pomodoro session is completed.
 pomodoro_cmd="afplay ~/.tim/alarm.wav"
 # Should the $pomodoro_cmd command loop until termination of Tim?
-pomodoro_repeat_cmd=0
+pomodoro_repeat_cmd=1
 
 # The default time in minutes for the work period under pomodoro mode.
 pomodoro_work=25

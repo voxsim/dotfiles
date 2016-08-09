@@ -11,3 +11,6 @@
 [submodule "dependencies/tmuxinator"]
 	path = dependencies/tmuxinator
 	url = https://github.com/tmuxinator/tmuxinator
+[submodule "dependencies/vim-plug"]
+	path = dependencies/vim-plug
+	url = https://github.com/junegunn/vim-plug

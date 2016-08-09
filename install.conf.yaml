@@ -1,24 +1,19 @@
 - defaults:
     link:
       relink: true
+      force: true
 
 - clean: ['~']
 
 - shell:
-  - [mkdir -p $HOME/.vim/tmp/undo, Create Vim folders]
-  - [mkdir -p $HOME/.vim/tmp/backup, Create Vim folders]
-  - [mkdir -p $HOME/.vim/tmp/swap, Create Vim folders]
-  - ["curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim", Install vim-plug]
-  - [mkdir -p $HOME/.tmux/plugins, Create tmux folders]
   - [git submodule update --init --recursive, Installing submodules]
-  - [vim +PlugClean +PluginInstall! +qall, Install vundle plugins]
-  - [dependencies/tpm/bin/install_plugins, Install tmux plugins]
 
 - link:
     ~/.dotfiles: ''
     ~/.bin: bin
     ~/.zshrc: zshrc
-    ~/.vimrc: vimrc
+    ~/.config: config
+    ~/.config/nvim/autoload/plug.vim: dependencies/vim-plug/plug.vim
     ~/.tmux/plugins/tpm: dependencies/tpm
     ~/.tmux.conf: tmux.conf
     ~/.tmuxinator: tmuxinator
@@ -29,6 +24,10 @@
     ~/.global_ignore: global_ignore
 
 - shell:
+  - [pip install neovim, install neovim python bindings for nvim async issue on some plugins]
+  - [nvim +PlugInstall! +qall, Install vim plugins]
+  - [mkdir -p $HOME/.tmux/plugins, Create tmux folders]
+  - [dependencies/tpm/bin/install_plugins, Install tmux plugins]
   - [touch ~/.zshrc-personal, Create personal zsh file]
   - [chmod 755 ~/.bin/*, Make executable everything in .bin]
   - [source ~/.zshrc, Reload zshrc configuration]

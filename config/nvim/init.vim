@@ -2,7 +2,7 @@ set nocompatible
 
 " Plugins ====================================================================
 
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
@@ -20,11 +20,6 @@ Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
-
-" Local plugins
-if filereadable(expand('~/.vimrc.plugins.local'))
-  source ~/.vimrc.plugins.local
-endif
 
 call plug#end()
 
@@ -70,15 +65,15 @@ set smartcase
 
 " Persistent undo and backups ================================================
 
-if has('persistent_undo')
-  set undodir=~/.vim/tmp/undo
-  set undoreload=10000
-  set undofile
-endif
+" if has('persistent_undo')
+"  set undodir=~/.vim/tmp/undo
+"  set undoreload=10000
+"  set undofile
+"endif
 
-set backupdir=~/.vim/tmp/backup
-set directory=~/.vim/tmp/swap
-set backup
+"set backupdir=~/.vim/tmp/backup
+"set directory=~/.vim/tmp/swap
+"set backup
 
 " Indentation ================================================================
 

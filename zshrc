@@ -15,7 +15,7 @@ plugins=(git tmux tmuxinator)
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin"
-export EDITOR='vim'
+export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 
 source $ZSH/oh-my-zsh.sh

@@ -2,6 +2,6 @@ name: <%= @settings["name"] %>
 root: <%= @settings["root"] %>
 
 windows:
-  - editor: vim
+  - editor: nvim
   - work:
   - git: git status

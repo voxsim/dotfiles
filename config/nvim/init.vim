@@ -1,15 +1,15 @@
-set nocompatible
-
 " Plugins ====================================================================
 
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'joshdick/onedark.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 Plug 'sheerun/vim-polyglot'
 Plug 'bling/vim-airline' " many integration to look for
 Plug 'christoomey/vim-run-interactive'
 Plug 'craigemery/vim-autotag'
-Plug 'ctrlpvim/ctrlp.vim' " commands to list
 Plug 'ervandew/supertab'
 Plug 'janko-m/vim-test'
 Plug 'mileszs/ack.vim' " -- until here
@@ -25,13 +25,8 @@ call plug#end()
 
 " General Config =============================================================
 
-set autoread
-set backspace=indent,eol,start
 set cursorline
-set encoding=utf-8
 set hidden
-set history=1000
-set laststatus=2
 set lazyredraw
 set modelines=0
 set number
@@ -42,7 +37,6 @@ set showmode
 set splitbelow
 set splitright
 set title
-set ttyfast
 set visualbell
 set clipboard=unnamed
 set colorcolumn=80
@@ -58,8 +52,6 @@ let maplocalleader = "\\"
 
 " Search Settings ============================================================
 
-set incsearch
-set hlsearch
 set ignorecase
 set smartcase
 
@@ -77,10 +69,7 @@ set smartcase
 
 " Indentation ================================================================
 
-set autoindent
 set smartindent
-set smarttab
-set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
@@ -88,13 +77,6 @@ set shiftround
 
 filetype plugin on
 filetype indent on
-
-set list listchars=tab:»·,trail:·
-set showbreak=↪
-
-" Completion =================================================================
-
-set wildmode=list:longest,full
 
 " Scrolling ==================================================================
 
@@ -228,8 +210,3 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" Easytags  =================================================================
-let g:easytags_cmd = '/usr/local/bin/ctags'
-
-let g:autotagTagsFile=".tags"

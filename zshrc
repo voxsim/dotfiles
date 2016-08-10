@@ -21,3 +21,5 @@ export DISABLE_AUTO_TITLE=true
 source $ZSH/oh-my-zsh.sh
 
 source ~/.zshrc-personal
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

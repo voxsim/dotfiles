@@ -75,9 +75,6 @@ set tabstop=2
 set expandtab
 set shiftround
 
-filetype plugin on
-filetype indent on
-
 " Scrolling ==================================================================
 
 set scrolloff=3
@@ -117,27 +114,8 @@ noremap <leader>T :TestSuite<CR>
 
 noremap <C-e> :NERDTreeToggle<CR>
 noremap <C-l> :nohlsearch<CR> " Clear search highlighting
-
-" Autocommands ===============================================================
-
-if has('autocmd')
-
-  set omnifunc=syntaxcomplete#Complete
-
-  augroup vimrcEx
-    au!
-
-    " Remove any trailing whitespace that is in the file
-    autocmd BufWrite * if ! &bin | :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) | endif
-
-    " Filetype-specific settings
-    autocmd Filetype ruby set tabstop=2 shiftwidth=2 softtabstop=2
-    autocmd BufRead *.html,*.htm set tabstop=2 shiftwidth=2 softtabstop=2 nowrap
-    autocmd BufRead *.txt set tabstop=2 shiftwidth=2 softtabstop=2
-
-  augroup END
-
-endif " has('autocmd')
+noremap <C-p> :GFiles<CR>
+noremap <C-f> :Files<CR>
 
 " Plugin settings ============================================================
 
@@ -159,22 +137,6 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-
-" CtrlP
-
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_extensions = ['tag']
-
-" Excluding version control directories
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*        " Linux/MacOSX
-set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*,*\\node_modules\\*  " Windows ('noshellslash')
-
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-      \ 'file': '\v\.(exe|so|dll)$',
-      \ 'link': 'some_bad_symbolic_links',
-      \ }
-
 " Signify
 
 let g:signify_vcs_list = ['git']
@@ -191,21 +153,7 @@ let g:airline_left_alt_sep='❯'
 let g:airline_right_alt_sep='❮'
 let g:airline_symbols.branch = '⚡'
 
-" Local vimrc ================================================================
-
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
-endif
-
-" Project specific vim =======================================================
-set exrc
-set secure
-
 " Syntastic  =================================================================
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1

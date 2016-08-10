@@ -1,7 +1,7 @@
 source ~/.config/nvim/plugins.vim
 
 syntax on
-colorscheme onedark
+colorscheme seoul256
 
 " General Config =============================================================
 
@@ -130,3 +130,5 @@ let g:SuperTabLongestHighlight = 1
 " Signify
 
 let g:signify_vcs_list = ['git']
+
+autocmd BufNewFile,BufRead * :Limelight

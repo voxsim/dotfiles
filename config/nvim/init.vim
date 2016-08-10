@@ -1,27 +1,7 @@
-" Plugins ====================================================================
+source ~/.config/nvim/plugins.vim
 
-call plug#begin('~/.config/nvim/plugged')
-
-Plug 'joshdick/onedark.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-Plug 'sheerun/vim-polyglot'
-Plug 'bling/vim-airline' " many integration to look for
-Plug 'christoomey/vim-run-interactive'
-Plug 'craigemery/vim-autotag'
-Plug 'ervandew/supertab'
-Plug 'janko-m/vim-test'
-Plug 'mileszs/ack.vim' " -- until here
-Plug 'mhinz/vim-signify'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'slim-template/vim-slim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-surround'
-
-call plug#end()
+syntax on
+colorscheme onedark
 
 " General Config =============================================================
 
@@ -42,9 +22,6 @@ set clipboard=unnamed
 set colorcolumn=80
 set ffs=unix,dos
 set ff=unix
-
-syntax on
-colorscheme onedark
 
 " Leader
 let mapleader = ","
@@ -102,22 +79,29 @@ noremap F gg=G
 noremap <F1> gT
 noremap <F2> gt
 
-noremap <leader>a :Ack!<Space>
+nnoremap <leader>git :Grepper -tool git -noswitch<cr>
+nnoremap <leader>ag  :Grepper -tool ag  -grepprg ag --vimgrep <cr>
+nnoremap <leader>*   :Grepper -tool ack -cword -noprompt<cr>
+
 noremap <leader>f :TestFile<CR>
 noremap <leader>g :TestVisit<CR>
 noremap <leader>l :TestLast<CR>
-noremap <leader>p :set paste!<CR> " Paste toggle
-noremap <leader>r :RunInInteractiveShell<space> " vim-run-interactive
-noremap <leader>s :%s//<left> " Substitute
 noremap <leader>t :TestNearest<CR>
 noremap <leader>T :TestSuite<CR>
 
+noremap <leader>p :set paste!<CR> " Paste toggle
+noremap <leader>s :%s//<left> " Substitute
+
 noremap <C-e> :NERDTreeToggle<CR>
 noremap <C-l> :nohlsearch<CR> " Clear search highlighting
+
 noremap <C-p> :GFiles<CR>
 noremap <C-f> :Files<CR>
 
 " Plugin settings ============================================================
+
+" Vim Test
+let test#strategy = "neovim"
 
 " NERD Tree
 let NERDTreeHighlightCursorline=1
@@ -126,20 +110,6 @@ let NERDTreeDirArrows = 1
 let NERDTreeChDirMode = 2
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 40
-
-" Supertab
-
-let g:SuperTabLongestHighlight = 1
-
-" Ack
-
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
-" Signify
-
-let g:signify_vcs_list = ['git']
 
 " Airline
 
@@ -153,8 +123,10 @@ let g:airline_left_alt_sep='❯'
 let g:airline_right_alt_sep='❮'
 let g:airline_symbols.branch = '⚡'
 
-" Syntastic  =================================================================
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Supertab
+
+let g:SuperTabLongestHighlight = 1
+
+" Signify
+
+let g:signify_vcs_list = ['git']

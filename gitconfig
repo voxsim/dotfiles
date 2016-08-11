@@ -5,11 +5,10 @@
     ui = auto
     interactive = auto
 [user]
-    name = Filippo Liverani
-    email = fili_live@yahoo.it
+    name = Simon Vocella
+    email = voxsim@gmail.com
 [core]
-    editor = vim
-	excludesfile = /Users/voxsim/.global_ignore
+    editor = nvim
 [alias]
     st = status
     ci = commit

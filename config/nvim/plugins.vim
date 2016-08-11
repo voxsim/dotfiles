@@ -8,6 +8,7 @@ Plug 'janko-m/vim-test'                                           " runner for t
 Plug 'bling/vim-airline'                                          " lean & mean status/tabline
 Plug 'mhinz/vim-grepper'                                          " Helps you win at grep.
 Plug 'sheerun/vim-polyglot'                                       " A solid language pack for Vim.
+Plug 'neomake/neomake'                                            " syntax checking
 Plug 'ervandew/supertab'                                          " Perform all your vim insert mode completions with Tab
 Plug 'scrooloose/nerdtree'                                        " A tree explorer for vim
 Plug 'tpope/vim-commentary'                                       " comment plugin

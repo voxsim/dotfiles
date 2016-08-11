@@ -22,6 +22,7 @@
     ~/.timrc: timrc
     ~/.ctags: ctags
     ~/.global_ignore: global_ignore
+    ~/.gitconfig: gitconfig
 
 - shell:
   - [pip install neovim, install neovim python bindings for nvim async issue on some plugins]

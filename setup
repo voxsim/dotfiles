@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+case $OSTYPE in
+    cygwin)
+        ;;
+    linux-gnu)
+        ;;
+    *)
+      echo "install brew"
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      echo "brew doctor"
+      xcode-select --install
+      brew doctor
+      brew tap Homebrew/bundle
+      brew bundle
+      brew cleanup
+        ;;
+esac

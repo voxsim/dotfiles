@@ -51,6 +51,7 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 set shiftround
+set shiftwidth=2
 
 " Scrolling ==================================================================
 
@@ -79,9 +80,7 @@ noremap F gg=G
 noremap <F1> gT
 noremap <F2> gt
 
-nnoremap <leader>git :Grepper -tool git -noswitch<cr>
-nnoremap <leader>ag  :Grepper -tool ag  -grepprg ag --vimgrep <cr>
-nnoremap <leader>*   :Grepper -tool ack -cword -noprompt<cr>
+nnoremap <C-g>  :Grepper -tool ag  -grepprg ag --vimgrep <cr>
 
 noremap <leader>f :TestFile<CR>
 noremap <leader>g :TestVisit<CR>
@@ -132,3 +131,9 @@ let g:SuperTabLongestHighlight = 1
 let g:signify_vcs_list = ['git']
 
 autocmd BufNewFile,BufRead * :Limelight
+
+" vim-markdown-preview
+
+let vim_markdown_preview_hotkey='<C-r>'
+
+let vim_markdown_preview_github=1

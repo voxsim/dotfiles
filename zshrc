@@ -14,12 +14,15 @@ ZSH_THEME="Soliah"
 plugins=(git tmux tmuxinator)
 
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin"
 export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 
 source $ZSH/oh-my-zsh.sh
 
+export GOPATH=$HOME/gopath
+
 source ~/.zshrc-personal
+source ~/.zshrc-aliases
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

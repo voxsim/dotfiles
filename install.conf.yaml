@@ -12,6 +12,7 @@
     ~/.dotfiles: ''
     ~/.bin: bin
     ~/.zshrc: zshrc
+    ~/.zshrc-aliases: zshrc-aliases
     ~/.config: config
     ~/.config/nvim/autoload/plug.vim: dependencies/vim-plug/plug.vim
     ~/.tmux/plugins/tpm: dependencies/tpm
@@ -20,11 +21,12 @@
     ~/.bin/tim: dependencies/tim/tim
     ~/.tim: dependencies/tim/audio_files
     ~/.timrc: timrc
-    ~/.ctags: ctags
     ~/.global_ignore: global_ignore
     ~/.gitconfig: gitconfig
+    ~/.pom.yml: pom.yml
 
 - shell:
+  - [./setup, setup os]
   - [pip install neovim, install neovim python bindings for nvim async issue on some plugins]
   - [nvim +PlugInstall! +qall, Install vim plugins]
   - [mkdir -p $HOME/.tmux/plugins, Create tmux folders]

@@ -16,5 +16,6 @@ Plug 'mhinz/vim-signify'                                          " Show a diff 
 Plug 'tpope/vim-surround'                                         " quoting/parenthesizing made simple
 Plug 'sotte/presenting.vim', { 'for': 'markdown' }                " A simple tool for presenting slides in vim based on text files.
 Plug 'junegunn/limelight.vim'                                     " focus tool
+Plug 'JamshedVesuna/vim-markdown-preview'                         " markdown preview
 
 call plug#end()

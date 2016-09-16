@@ -1,0 +1,27 @@
+default:
+    duration: 25
+    start:
+        - terminal-notifier -message "Pomodoro started!"
+    stop:
+        - terminal-notifier -message "Pomodoro stoped!"
+    end:
+        - terminal-notifier -message "Pomodoro ended!"
+
+short:
+    duration: 5
+    start:
+        - terminal-notifier -message "Short break started!"
+    stop:
+        - terminal-notifier -message "Short break stoped!"
+    end:
+        - terminal-notifier -message "Short break ended!"
+
+long:
+    duration: 15
+    start:
+        - terminal-notifier -message "Long break started!"
+    stop:
+        - terminal-notifier -message "Long break stoped!"
+    end:
+        - terminal-notifier -message "Long break ended!"
+

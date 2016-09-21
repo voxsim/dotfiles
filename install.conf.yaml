@@ -35,3 +35,4 @@
   - [chmod 755 ~/.bin/*, Make executable everything in .bin]
   - [source ~/.zshrc, Reload zshrc configuration]
   - [git config --global core.excludesfile $HOME/.global_ignore, add global ignore in git]
+  - [pip install -r ~/.dotfiles/pip-requirements.txt, add global ignore in git]

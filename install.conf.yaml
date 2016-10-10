@@ -30,7 +30,7 @@
   - [pip install neovim, install neovim python bindings for nvim async issue on some plugins]
   - [nvim +PlugInstall! +qall, Install vim plugins]
   - [mkdir -p $HOME/.tmux/plugins, Create tmux folders]
-  - [dependencies/tpm/bin/install_plugins, Install tmux plugins]
+  - [TMUX_PLUGIN_MANAGER_PATH=~/.tmux/plugins dependencies/tpm/bin/install_plugins, Install tmux plugins]
   - [touch ~/.zshrc-personal, Create personal zsh file]
   - [chmod 755 ~/.bin/*, Make executable everything in .bin]
   - [source ~/.zshrc, Reload zshrc configuration]

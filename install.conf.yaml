@@ -7,6 +7,9 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [gem install thor, Install thor for tmuxinator]
+  - [gem install tmuxinator, Install tmuxinator]
+  - [gem install ncurses, Install tmuxinator]
 
 - link:
     ~/.dotfiles: ''

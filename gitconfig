@@ -9,7 +9,7 @@
     email = voxsim@gmail.com
 [core]
     editor = nvim
-	excludesfile = /Users/voxsim/.global_ignore
+	excludesfile = /home/voxsim/.global_ignore
 [alias]
     st = status
     ci = commit

@@ -13,14 +13,14 @@ ZSH_THEME="Soliah"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux tmuxinator)
 
+export GOPATH=$HOME/gopath
+
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin:$GOPATH/bin"
 export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 
 source $ZSH/oh-my-zsh.sh
-
-export GOPATH=$HOME/gopath
 
 source ~/.zshrc-personal
 source ~/.zshrc-aliases

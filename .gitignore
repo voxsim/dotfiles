@@ -2,5 +2,5 @@ chef-repo/.chef/knife.rb
 tmuxinator/*.yml
 bin/tim
 bin/tmuxinator
-config/nvim/autoload/plug.vim
-config/nvim/plugged/
+nvim/autoload/plug.vim
+nvim/plugged/

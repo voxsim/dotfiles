@@ -10,14 +10,17 @@
   - [gem install thor, Install thor for tmuxinator]
   - [gem install tmuxinator, Install tmuxinator]
   - [gem install ncurses, Install tmuxinator]
+  - [mkdir -p ~/.tmux/plugins]
+  - [mkdir -p ~/.config]
 
 - link:
     ~/.dotfiles: ''
     ~/.bin: bin
     ~/.zshrc: zshrc
     ~/.zshrc-aliases: zshrc-aliases
-    ~/.config: config
+    ~/.config/nvim: nvim
     ~/.config/nvim/autoload/plug.vim: dependencies/vim-plug/plug.vim
+    ~/.oh-my-zsh: dependencies/oh-my-zsh
     ~/.tmux/plugins/tpm: dependencies/tpm
     ~/.tmux.conf: tmux.conf
     ~/.tmuxinator: tmuxinator
@@ -29,7 +32,6 @@
     ~/.pom.yml: pom.yml
 
 - shell:
-  - [./setup, setup os]
   - [pip install neovim, install neovim python bindings for nvim async issue on some plugins]
   - [nvim +PlugInstall! +qall, Install vim plugins]
   - [mkdir -p $HOME/.tmux/plugins, Create tmux folders]

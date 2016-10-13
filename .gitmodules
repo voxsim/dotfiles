@@ -14,3 +14,6 @@
 [submodule "dependencies/vim-plug"]
 	path = dependencies/vim-plug
 	url = https://github.com/junegunn/vim-plug
+[submodule "dependencies/oh-my-zsh"]
+	path = dependencies/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git

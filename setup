@@ -14,5 +14,6 @@ case $OSTYPE in
       brew tap Homebrew/bundle
       brew bundle
       brew cleanup
+      chsh -s $(which zsh)
         ;;
 esac

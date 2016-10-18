@@ -43,7 +43,6 @@
 
 # TODO
 #
-# set shell chsh -s $(which zsh)
 # set zsh theme
 # fix fzf, where is?
 # add nerd-fonts

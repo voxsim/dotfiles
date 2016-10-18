@@ -9,7 +9,6 @@
   - [git submodule update --init --recursive, Installing submodules]
   - [gem install thor, Install thor for tmuxinator]
   - [gem install tmuxinator, Install tmuxinator]
-  - [gem install ncurses, Install tmuxinator]
   - [mkdir -p ~/.tmux/plugins]
   - [mkdir -p ~/.config]
 
@@ -41,3 +40,12 @@
   - [source ~/.zshrc, Reload zshrc configuration]
   - [git config --global core.excludesfile $HOME/.global_ignore, add global ignore in git]
   - [pip install -r ~/.dotfiles/pip-requirements.txt, add global ignore in git]
+
+# TODO
+#
+# set shell chsh -s $(which zsh)
+# set zsh theme
+# fix fzf, where is?
+# add nerd-fonts
+# add vim-devicons
+# add brew bundle to setup

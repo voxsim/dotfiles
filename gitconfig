@@ -9,7 +9,7 @@
     email = voxsim@gmail.com
 [core]
     editor = nvim
-	excludesfile = /Users/simonvocella/.global_ignore
+    excludesfile = ~/.global_ignore
 [alias]
     st = status
     ci = commit

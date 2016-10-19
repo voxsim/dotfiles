@@ -17,5 +17,6 @@ Plug 'tpope/vim-surround'                                         " quoting/pare
 Plug 'sotte/presenting.vim', { 'for': 'markdown' }                " A simple tool for presenting slides in vim based on text files.
 Plug 'junegunn/limelight.vim'                                     " focus tool
 Plug 'JamshedVesuna/vim-markdown-preview'                         " markdown preview
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()

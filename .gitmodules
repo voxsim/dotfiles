@@ -20,6 +20,3 @@
 [submodule "dependencies/nerd-fonts"]
 	path = dependencies/nerd-fonts
 	url = https://github.com/ryanoasis/nerd-fonts
-[submodule "dependencies/vim-devicons"]
-	path = dependencies/vim-devicons
-	url = https://github.com/ryanoasis/vim-devicons.git

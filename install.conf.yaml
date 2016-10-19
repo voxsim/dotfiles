@@ -11,6 +11,7 @@
   - [gem install tmuxinator, Install tmuxinator]
   - [mkdir -p ~/.tmux/plugins]
   - [mkdir -p ~/.config]
+  - [cd dependencies/nerd-fonts; ./install.sh; cd -, install nerd-fonts]
 
 - link:
     ~/.dotfiles: ''
@@ -40,10 +41,3 @@
   - [source ~/.zshrc, Reload zshrc configuration]
   - [git config --global core.excludesfile $HOME/.global_ignore, add global ignore in git]
   - [pip install -r ~/.dotfiles/pip-requirements.txt, add global ignore in git]
-
-# TODO
-#
-# set zsh theme
-# fix fzf, where is?
-# add nerd-fonts
-# add vim-devicons

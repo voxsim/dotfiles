@@ -17,3 +17,9 @@
 [submodule "dependencies/oh-my-zsh"]
 	path = dependencies/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "dependencies/nerd-fonts"]
+	path = dependencies/nerd-fonts
+	url = https://github.com/ryanoasis/nerd-fonts
+[submodule "dependencies/vim-devicons"]
+	path = dependencies/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git

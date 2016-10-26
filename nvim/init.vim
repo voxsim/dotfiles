@@ -59,81 +59,10 @@ set scrolloff=3
 set sidescrolloff=15
 set sidescroll=1
 
-" Convenience mappings =======================================================
+" Keyboard mappings
 
-" Disable arrow keys in normal mode
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+source ~/.config/nvim/keyboard/init.vim
 
-" Disable arrow keys in insert mode
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
+" Plugin settings
 
-" Formatting
-noremap F gg=G
-
-" Easy tab navigation
-noremap <F1> gT
-noremap <F2> gt
-
-nnoremap <C-g>  :Grepper -tool ag  -grepprg ag --vimgrep <cr>
-
-noremap <leader>f :TestFile<CR>
-noremap <leader>g :TestVisit<CR>
-noremap <leader>l :TestLast<CR>
-noremap <leader>t :TestNearest<CR>
-noremap <leader>T :TestSuite<CR>
-
-noremap <leader>p :set paste!<CR> " Paste toggle
-noremap <leader>s :%s//<left> " Substitute
-
-noremap <C-e> :NERDTreeToggle<CR>
-noremap <C-l> :nohlsearch<CR> " Clear search highlighting
-
-noremap <C-p> :GFiles<CR>
-noremap <C-f> :Files<CR>
-
-" Plugin settings ============================================================
-
-" Vim Test
-let test#strategy = "neovim"
-
-" NERD Tree
-let NERDTreeHighlightCursorline=1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeChDirMode = 2
-let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 40
-
-" Airline
-
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_left_alt_sep='❯'
-let g:airline_right_alt_sep='❮'
-let g:airline_symbols.branch = '⚡'
-
-" Supertab
-
-let g:SuperTabLongestHighlight = 1
-
-" Signify
-
-let g:signify_vcs_list = ['git']
-
-autocmd BufNewFile,BufRead * :Limelight
-
-" vim-markdown-preview
-
-let vim_markdown_preview_hotkey='<C-r>'
-
-let vim_markdown_preview_github=1
+source ~/.config/nvim/settings/init.vim

@@ -22,6 +22,8 @@ set clipboard=unnamed
 set colorcolumn=80
 set ffs=unix,dos
 set ff=unix
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set list
 
 " Leader
 let mapleader = ","

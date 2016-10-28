@@ -21,7 +21,9 @@ Plug 'MarcWeber/vim-addon-local-vimrc'                            " local vimrc 
 Plug 'terryma/vim-multiple-cursors'                               " vim multiple cursor like sublime
 Plug 'ntpeters/vim-better-whitespace'                             " highlight whitespaces
 Plug 'ecomba/vim-ruby-refactoring'                                " refactoring for ruby
+Plug 'keith/investigate.vim'                                      " Looking up documentation
 " Plug 'LucHermitte/vim-refactor'
 " metakirby5/codi.vim
+
 
 call plug#end()

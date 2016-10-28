@@ -2,10 +2,13 @@ default:
     duration: 25
     start:
         - terminal-notifier -message "Pomodoro started!"
+        - osascript -e 'tell application "Spotify" to play';
     stop:
         - terminal-notifier -message "Pomodoro stoped!"
+        - osascript -e 'tell application "Spotify" to pause';
     end:
         - terminal-notifier -message "Pomodoro ended!"
+        - osascript -e 'tell application "Spotify" to pause';
         - pmset displaysleepnow
 
 short:

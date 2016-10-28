@@ -1,6 +1,3 @@
-" Vim Test
-let test#strategy = "neovim"
-
 " NERD Tree
 let NERDTreeHighlightCursorline=1
 let NERDTreeMinimalUI = 1
@@ -36,3 +33,6 @@ autocmd BufNewFile,BufRead * :Limelight
 let vim_markdown_preview_hotkey='<C-r>'
 
 let vim_markdown_preview_github=1
+
+source ~/.config/nvim/settings/fzf.vim
+source ~/.config/nvim/settings/vim-test.vim

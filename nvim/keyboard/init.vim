@@ -23,4 +23,5 @@ noremap <C-l> :nohlsearch<CR> " Clear search highlighting
 
 source ~/.config/nvim/keyboard/fzf.vim
 source ~/.config/nvim/keyboard/nerd-tree.vim
+source ~/.config/nvim/keyboard/signify.vim
 source ~/.config/nvim/keyboard/vim-test.vim

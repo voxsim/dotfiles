@@ -15,10 +15,7 @@ let g:airline_symbols.branch = '⚡'
 
 let g:SuperTabLongestHighlight = 1
 
-" Signify
-
-let g:signify_vcs_list = ['git']
-
 source ~/.config/nvim/settings/fzf.vim
 source ~/.config/nvim/settings/nerd-tree.vim
+source ~/.config/nvim/settings/signify.vim
 source ~/.config/nvim/settings/vim-test.vim

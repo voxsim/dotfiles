@@ -14,7 +14,6 @@ Plug 'tpope/vim-commentary'                                       " comment plug
 Plug 'mhinz/vim-signify'                                          " Show a diff via Vim sign column
 Plug 'tpope/vim-surround'                                         " quoting/parenthesizing made simple
 Plug 'sotte/presenting.vim', { 'for': 'markdown' }                " A simple tool for presenting slides in vim based on text files.
-Plug 'JamshedVesuna/vim-markdown-preview'                         " markdown preview
 Plug 'ryanoasis/vim-devicons'                                     " vim dev icons from nerd-fonts
 Plug 'MarcWeber/vim-addon-local-vimrc'                            " local vimrc for projects
 Plug 'terryma/vim-multiple-cursors'                               " vim multiple cursor like sublime

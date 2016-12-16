@@ -19,12 +19,6 @@ let g:SuperTabLongestHighlight = 1
 
 let g:signify_vcs_list = ['git']
 
-" vim-markdown-preview
-
-let vim_markdown_preview_hotkey='<C-r>'
-
-let vim_markdown_preview_github=1
-
 source ~/.config/nvim/settings/fzf.vim
 source ~/.config/nvim/settings/nerd-tree.vim
 source ~/.config/nvim/settings/vim-test.vim

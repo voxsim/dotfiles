@@ -1,10 +1,3 @@
-" NERD Tree
-let NERDTreeHighlightCursorline=1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeChDirMode = 2
-let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 40
 
 " Airline
 
@@ -26,8 +19,6 @@ let g:SuperTabLongestHighlight = 1
 
 let g:signify_vcs_list = ['git']
 
-autocmd BufNewFile,BufRead * :Limelight
-
 " vim-markdown-preview
 
 let vim_markdown_preview_hotkey='<C-r>'
@@ -35,4 +26,5 @@ let vim_markdown_preview_hotkey='<C-r>'
 let vim_markdown_preview_github=1
 
 source ~/.config/nvim/settings/fzf.vim
+source ~/.config/nvim/settings/nerd-tree.vim
 source ~/.config/nvim/settings/vim-test.vim

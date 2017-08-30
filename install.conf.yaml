@@ -6,12 +6,16 @@
 - clean: ['~']
 
 - shell:
+  - [chsh -s /bin/zsh, set zsh]
+  - [./install-brew, Installing brew]
+  - [./install-oh-my-zsh, install oh-my-zsh]
+  - [brew tap Homebrew/bundle, tap brew bundle]
+  - [brew bundle, Installing through brew bundle]
   - [git submodule update --init --recursive, Installing submodules]
   - [gem install thor, Install thor for tmuxinator]
   - [gem install tmuxinator, Install tmuxinator]
   - [mkdir -p ~/.tmux/plugins]
   - [mkdir -p ~/.config]
-  - [cd dependencies/nerd-fonts; ./install.sh; cd -, install nerd-fonts]
 
 - link:
     ~/.dotfiles: ''
@@ -20,20 +24,15 @@
     ~/.zshrc-aliases: zshrc-aliases
     ~/.config/nvim: nvim
     ~/.config/nvim/autoload/plug.vim: dependencies/vim-plug/plug.vim
-    ~/.oh-my-zsh: dependencies/oh-my-zsh
     ~/.tmux/plugins/tpm: dependencies/tpm
     ~/.tmux.conf: tmux.conf
     ~/.tmuxinator: tmuxinator
-    ~/.bin/tim: dependencies/tim/tim
-    ~/.tim: dependencies/tim/audio_files
-    ~/.timrc: timrc
     ~/.global_ignore: global_ignore
     ~/.gitconfig: gitconfig
     ~/.pom.yml: pom.yml
 
 - shell:
   - [pip install neovim, install neovim python bindings for nvim async issue on some plugins]
-  - [nvim +PlugInstall! +qall, Install vim plugins]
   - [mkdir -p $HOME/.tmux/plugins, Create tmux folders]
   - [TMUX_PLUGIN_MANAGER_PATH=~/.tmux/plugins dependencies/tpm/bin/install_plugins, Install tmux plugins]
   - [touch ~/.zshrc-personal, Create personal zsh file]

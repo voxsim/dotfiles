@@ -2,9 +2,6 @@
 [submodule "dependencies/dotbot"]
 	path = dependencies/dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "dependencies/tim"]
-	path = dependencies/tim
-	url = https://github.com/ggustafsson/Tim
 [submodule "dependencies/tpm"]
 	path = dependencies/tpm
 	url = https://github.com/tmux-plugins/tpm
@@ -14,9 +11,3 @@
 [submodule "dependencies/vim-plug"]
 	path = dependencies/vim-plug
 	url = https://github.com/junegunn/vim-plug
-[submodule "dependencies/oh-my-zsh"]
-	path = dependencies/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "dependencies/nerd-fonts"]
-	path = dependencies/nerd-fonts
-	url = https://github.com/ryanoasis/nerd-fonts

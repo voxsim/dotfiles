@@ -1,29 +1,23 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
-DISABLE_UPDATE_PROMPT=true
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux tmuxinator)
-
 export GOPATH=$HOME/gopath
+export YARNBIN=`yarn global bin`
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin:$GOPATH/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin:$GOPATH/bin:$YARNBIN"
 export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 
-source $ZSH/oh-my-zsh.sh
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
-source ~/.zshrc-personal
-source ~/.zshrc-aliases
+zplug mafredri/zsh-async, from:github
+zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+zplug junegunn/fzf, use:"shell/{completion,key-bindings}.zsh"
+zplug plugins/git,   from:oh-my-zsh
+zplug "b4b4r07/emoji-cli"
+zplug b4b4r07/enhancd, use:init.sh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+ENHANCD_FILTER=fzf
+export ENHANCD_FILTER
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose

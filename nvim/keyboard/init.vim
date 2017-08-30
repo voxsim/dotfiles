@@ -21,6 +21,8 @@ noremap <leader>p :set paste!<CR> " Paste toggle
 
 noremap <C-l> :nohlsearch<CR> " Clear search highlighting
 
+let vim_markdown_preview_hotkey='<C-m>'
+
 source ~/.config/nvim/keyboard/fzf.vim
 source ~/.config/nvim/keyboard/nerd-tree.vim
 source ~/.config/nvim/keyboard/signify.vim

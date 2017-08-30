@@ -20,6 +20,7 @@ Plug 'terryma/vim-multiple-cursors'                               " vim multiple
 Plug 'ntpeters/vim-better-whitespace'                             " highlight whitespaces
 Plug 'ecomba/vim-ruby-refactoring'                                " refactoring for ruby
 Plug 'keith/investigate.vim'                                      " Looking up documentation
+" Plug 'suan/vim-instant-markdown'                                  " vim markdown preview
 " Plug 'LucHermitte/vim-refactor'
 " metakirby5/codi.vim
 

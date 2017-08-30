@@ -21,7 +21,6 @@
     ~/.dotfiles: ''
     ~/.bin: bin
     ~/.zshrc: zshrc
-    ~/.zshrc-aliases: zshrc-aliases
     ~/.config/nvim: nvim
     ~/.config/nvim/autoload/plug.vim: dependencies/vim-plug/plug.vim
     ~/.tmux/plugins/tpm: dependencies/tpm
@@ -29,15 +28,12 @@
     ~/.tmuxinator: tmuxinator
     ~/.global_ignore: global_ignore
     ~/.gitconfig: gitconfig
-    ~/.pom.yml: pom.yml
 
 - shell:
   - [pip install neovim, install neovim python bindings for nvim async issue on some plugins]
   - [mkdir -p $HOME/.tmux/plugins, Create tmux folders]
   - [TMUX_PLUGIN_MANAGER_PATH=~/.tmux/plugins dependencies/tpm/bin/install_plugins, Install tmux plugins]
-  - [touch ~/.zshrc-personal, Create personal zsh file]
   - [chmod 755 ~/.bin/*, Make executable everything in .bin]
   - [source ~/.zshrc, Reload zshrc configuration]
   - [git config --global core.excludesfile $HOME/.global_ignore, add global ignore in git]
   - [pip install -r ~/.dotfiles/pip-requirements.txt, add global ignore in git]
-  - [npm install -g pom, timer]

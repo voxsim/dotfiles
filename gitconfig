@@ -1,33 +1,33 @@
 [color]
-    branch = auto
-    diff = auto
-    status = auto
-    ui = auto
-    interactive = auto
+  branch = auto
+  diff = auto
+  status = auto
+  ui = auto
+  interactive = auto
 [user]
-    name = Simon Vocella
-    email = voxsim@gmail.com
+  name = Simon Vocella
+  email = voxsim@gmail.com
 [core]
-    editor = nvim
-	excludesfile = /Users/user/.global_ignore
+  editor = nvim
+  excludesfile = /Users/user/.global_ignore
 [alias]
-    st = status
-    ci = commit
-    br = branch
-    co = checkout
-    df = diff
-    dc = diff --cached
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --decorate=full --all
-    who = shortlog -s -s-
-    aa = add -A
-    sf = stash --keep-index
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  dc = diff --cached
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --decorate=full --all
+  who = shortlog -s -s-
+  aa = add -A
+  sf = stash --keep-index
 [push]
-    default = current
+  default = current
 [merge]
-    tool = vimdiff
+  tool = vimdiff
 [diff]
-    tool = vimdiff
+  tool = vimdiff
 [pull]
-    rebase = false
+  rebase = false
 [http]
-	cookiefile = /Users/voxsim/.gitcookies
+  cookiefile = /Users/voxsim/.gitcookies

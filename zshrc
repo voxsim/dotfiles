@@ -18,5 +18,6 @@ zplug b4b4r07/enhancd, use:init.sh
 ENHANCD_FILTER=fzf
 export ENHANCD_FILTER
 
-# Then, source plugins and add commands to $PATH
 zplug load --verbose
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

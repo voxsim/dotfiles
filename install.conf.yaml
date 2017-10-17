@@ -8,7 +8,6 @@
 - shell:
   - [chsh -s /bin/zsh, set zsh]
   - [./install-brew, Installing brew]
-  - [./install-oh-my-zsh, install oh-my-zsh]
   - [brew tap Homebrew/bundle, tap brew bundle]
   - [brew bundle, Installing through brew bundle]
   - [git submodule update --init --recursive, Installing submodules]

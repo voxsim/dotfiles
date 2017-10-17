@@ -1,8 +1,7 @@
 export GOPATH=$HOME/gopath
-export YARNBIN=`yarn global bin`
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin:$GOPATH/bin:$YARNBIN"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin:$GOPATH/bin"
 export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 

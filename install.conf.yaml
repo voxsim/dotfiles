@@ -10,7 +10,7 @@
   - [./install-brew, Installing brew]
   - [brew tap Homebrew/bundle, tap brew bundle]
   - [brew bundle cleanup, Installing through brew bundle]
-  - [brew bundle, Installing through brew bundle]
+  - [brew bundle -v, Installing through brew bundle]
   - [git submodule update --init --recursive, Installing submodules]
   - [rbenv install -f 2.4.2, Installing last version of ruby]
   - [rbenv global 2.4.2, Setting last version of ruby]
@@ -30,11 +30,14 @@
     ~/.gitconfig: gitconfig
 
 - shell:
-  - [pip2.7 install neovim, install neovim python bindings for nvim async issue on some plugins]
   - [mkdir -p $HOME/.tmux/plugins, Create tmux folders]
   - [TMUX_PLUGIN_MANAGER_PATH=~/.tmux/plugins dependencies/tpm/bin/install_plugins, Install tmux plugins]
   - [chmod 755 ~/.bin/*, Make executable everything in .bin]
+  - [zplug install, Install zplug plugins]
+  - [zplug clear, Clear cache]
   - [source ~/.zshrc, Reload zshrc configuration]
   - [git config --global core.excludesfile $HOME/.global_ignore, add global ignore in git]
   - [gem install thor, Install thor for tmuxinator]
   - [gem install tmuxinator, Install tmuxinator]
+
+# echo "install https://github.com/sindresorhus/iterm2-snazzy", Color preset for iterm

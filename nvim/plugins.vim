@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'junegunn/seoul256.vim'
 Plug 'joshdick/onedark.vim'                                       " theme
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy file finder
+Plug '/usr/local/opt/fzf'                                         " fuzzy file finder
 Plug 'junegunn/fzf.vim'                                           " fuzzy file finder plugin
 Plug 'janko-m/vim-test'                                           " runner for tests
 Plug 'bling/vim-airline'                                          " lean & mean status/tabline
@@ -20,7 +20,6 @@ Plug 'terryma/vim-multiple-cursors'                               " vim multiple
 Plug 'ntpeters/vim-better-whitespace'                             " highlight whitespaces
 Plug 'ecomba/vim-ruby-refactoring'                                " refactoring for ruby
 Plug 'keith/investigate.vim'                                      " Looking up documentation
-" Plug 'suan/vim-instant-markdown'                                  " vim markdown preview
 " Plug 'LucHermitte/vim-refactor'
 " metakirby5/codi.vim
 

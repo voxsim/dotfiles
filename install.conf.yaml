@@ -6,16 +6,13 @@
 - clean: ['~']
 
 - shell:
-  - [chsh -s /bin/zsh, set zsh]
   - [./install-brew, Installing brew]
   - [brew tap Homebrew/bundle, tap brew bundle]
   - [brew bundle cleanup, Installing through brew bundle]
   - [brew bundle -v, Installing through brew bundle]
-  - [git submodule update --init --recursive, Installing submodules]
-  - [rbenv install -f 2.4.2, Installing last version of ruby]
-  - [rbenv global 2.4.2, Setting last version of ruby]
   - [mkdir -p ~/.tmux/plugins]
   - [mkdir -p ~/.config]
+  - [chsh -s /bin/zsh, set zsh]
 
 - link:
     ~/.dotfiles: ''
@@ -36,8 +33,7 @@
   - [zplug install, Install zplug plugins]
   - [zplug clear, Clear cache]
   - [source ~/.zshrc, Reload zshrc configuration]
-  - [git config --global core.excludesfile $HOME/.global_ignore, add global ignore in git]
   - [gem install thor, Install thor for tmuxinator]
-  - [gem install tmuxinator, Install tmuxinator]
+  - [gem install tmuxinator, Install tmuxinator] - [git config --global core.excludesfile $HOME/.global_ignore, add global ignore in git]
 
 # echo "install https://github.com/sindresorhus/iterm2-snazzy", Color preset for iterm

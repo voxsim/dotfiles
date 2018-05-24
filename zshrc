@@ -1,7 +1,5 @@
-export GOPATH=$HOME/gopath
-
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin:$GOPATH/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 
@@ -27,3 +25,6 @@ zplug load --verbose
 
 # Check initial directory for any .venv file
 check_venv
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"

@@ -1,4 +1,4 @@
-# My dotfiles with neovim, tmux, zsh, etc..
+# My dotfiles
 
 ## How to install it
 
@@ -17,3 +17,6 @@ cd dotfiles
 git submodule update --init --recursive
 ./install
 ```
+
+## After
+- Install https://github.com/sindresorhus/iterm2-snazzy

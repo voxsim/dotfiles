@@ -10,7 +10,6 @@
   - [brew tap Homebrew/bundle, tap brew bundle]
   - [brew bundle cleanup, Installing through brew bundle]
   - [brew bundle -v, Installing through brew bundle]
-  - [mkdir -p ~/.tmux/plugins]
   - [mkdir -p ~/.config]
   - [chsh -s /bin/zsh, set zsh]
 
@@ -18,11 +17,6 @@
     ~/.dotfiles: ''
     ~/.bin: bin
     ~/.zshrc: zshrc
-    ~/.config/nvim: nvim
-    ~/.config/nvim/autoload/plug.vim: dependencies/vim-plug/plug.vim
-    ~/.tmux/plugins/tpm: dependencies/tpm
-    ~/.tmux.conf: tmux.conf
-    ~/.tmuxinator: tmuxinator
     ~/.global_ignore: global_ignore
     ~/.gitconfig: gitconfig
 
@@ -33,7 +27,5 @@
   - [zplug install, Install zplug plugins]
   - [zplug clear, Clear cache]
   - [source ~/.zshrc, Reload zshrc configuration]
-  - [gem install thor, Install thor for tmuxinator]
-  - [gem install tmuxinator, Install tmuxinator] - [git config --global core.excludesfile $HOME/.global_ignore, add global ignore in git]
 
 # echo "install https://github.com/sindresorhus/iterm2-snazzy", Color preset for iterm

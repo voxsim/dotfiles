@@ -1,7 +1,0 @@
-#!/usr/bin/env zsh
-
-directory_path=`pwd`
-directory_name=`basename $directory_path`
-directory_name_stripped=`print "${directory_name//[^a-zA-Z]/}"`
-
-tmuxinator start project root=$directory_path name=$directory_name_stripped

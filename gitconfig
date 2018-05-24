@@ -8,8 +8,8 @@
   name = Simon Vocella
   email = voxsim@gmail.com
 [core]
-  editor = nvim
-	excludesfile = /Users/voxsim/.global_ignore
+  editor = vim
+  excludesfile = /Users/voxsim/.global_ignore
 [alias]
   st = status
   ci = commit
@@ -21,6 +21,7 @@
   who = shortlog -s -s-
   aa = add -A
   sf = stash --keep-index
+  back = git reset --soft HEAD~1
 [push]
   default = current
 [merge]
